@@ -1,0 +1,18 @@
+P = Python
+E = Enhancement
+P = Proposals
+
+- Python es un set de reglas que cumple el lenguaje para poder se considerado como tal.
+- Es un lenguaje de alto nivel.
+
+- Implementaciones de Python
+    - CPython = C
+    - PyPy = Python
+    - Jython = Java
+    - JronPython = C#
+    - Brython = Explorador web el cual utiliza un traductor para convertirlo en codigo JavaScript
+
+- Proceso para que la maquina entienda lo que se programa
+
+JAVA -> Compilador -> ByteCode -> JVM (Java Virtual Machine) -> Lenguaje Maquina
+Python -> Compilador -> ByteCode -> PVM (Python Virtual Machine) -> Lenguaje Maquina
