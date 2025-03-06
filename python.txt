@@ -16,3 +16,5 @@ P = Proposals
 
 JAVA -> Compilador -> ByteCode -> JVM (Java Virtual Machine) -> Lenguaje Maquina
 Python -> Compilador -> ByteCode -> PVM (Python Virtual Machine) -> Lenguaje Maquina
+
+- Un argumento son los valores que nosotros le pasamos a una funcion.
