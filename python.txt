@@ -19,3 +19,49 @@ Python -> Compilador -> ByteCode -> PVM (Python Virtual Machine) -> Lenguaje Maq
 
 - Un argumento son los valores que nosotros le pasamos a una funcion.
 - Los metodos son funciones que se encuentran dentro de un objeto
+
+Django: Es un framework que esta encima de Python
+
+- Pasos para instalar Django
+
+    - sudo apt install python3-django
+    - django-admin --version
+
+- Pasos para crear un entorno virtual y activarlo.
+
+    - python3 -m venv --name-entorno
+    - source --name-entorno/bin/activate
+
+- Dentro del entorno virtual
+
+    - pip install django 
+    - django-admin startproject mysite . == Crea el proyecto en el directorio actual
+    - python3 manage.py startapp --name
+    - python3 manage.py runserver --number-port == Levanta el servidor
+    - python3 manage.py --help
+    - python3 manage.py makemigrations == Despues de editar el archivo de models
+    - python3 manage.py migrate == Ejecuta todas las migraciones
+
+- Cuando nosotros creamos una carpeta en Django estamos creando un proyecto.
+- Los proyectos en Django se dividen en distintas aplicaciones
+
+- Este comando funciona para poder acceder a la shell de django y porder hacer manipulacion de datos.
+    - python3 manage.py shell
+    - from --name-project import --class-of-model
+    - variable = --class-model(name="Aplicacion Movil") == Insercion de datos a la tabla
+    - variable.save() == Guardado de datos
+    - Project.objects.all() == Listado de datos
+    - Project.objects.get(id=1) == Buscar por un campo especifico
+    - p.task_set.create(title="desarrollar login") == p(corresponde a projects, guardamos todos los project en una variable que se llama p, de ahi accedemos a la relaciones y con el metodo create le pasamos los campos para asignarle una tarea al proyecto en este caso.)
+    - p.task_set.all() == Obtiene todas las tareas asignadas a este proyecto.
+    - p.task_set.get(id=1) == Filtrado por campo
+    - Project.objects.filter(name__startswitch="aplicacion") == Busca todos los registros que tengan la palabra aplicacion
+
+
+- python3 manage.py createsuperuser == Para usar el panel administrativo que trae Django, pide un user, password y email.
+
+- Django utiliza el motor de plantillas llamado Jinja 2
+
+- Django Rest framework esta encima de Django
+    - crear un archivo serializer.py estos permiten llamar un modulo especial de rest framework.
+    - el viewSet nos dice quien puede consultar el serializer
