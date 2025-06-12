@@ -30,7 +30,7 @@ Django: Es un framework que esta encima de Python
 - Pasos para crear un entorno virtual y activarlo.
 
     - python3 -m venv --name-entorno
-    - source --name-entorno/bin/activate
+    - source venv/bin/activate
 
 - Dentro del entorno virtual
 
