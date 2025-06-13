@@ -96,3 +96,15 @@ python3 manage.py createsuperuser
 - Los operadores lógicos se evalúan de izquierda a derecha.
     - Con el operador `and` basta con que el valor izquiero sea `false` para ya no seguir evaluando lo demas
     - Con el operador `or` basta con que el primero sea `true` para ya no seguir evaluando lo demas.
+
+- Operadores de comparacion
+
+```py
+# Forma normal
+if edad >= 15 and edad <= 65:
+    print("Puedes entrar a la piscina")
+
+# Forma simplificada
+if 15 <= edad <= 65:
+    print("Puedes entrar a la piscina")
+```
