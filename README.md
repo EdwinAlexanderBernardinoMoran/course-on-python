@@ -119,3 +119,13 @@ if 15 <= edad <= 65:
 def myFunction(parameterOne, parameterTwo):
     print(f"{parameterOne} {parameterTwo}")
 ```
+
+- Para pasar multiples argumentos a una funcion es necesario utilizar `xargs` o el signo * y el nombre del parametro.
+
+```py
+def sum(*args):
+    result = 0
+    for arg in args:
+        result += arg
+    print(f"La suma de los argumentos es: {result}")
+```
