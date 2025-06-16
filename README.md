@@ -110,3 +110,12 @@ if 15 <= edad <= 65:
 ```
 
 - Iterables son: Tuplas, Listas y Strings
+
+## S4 - Funciones
+
+**Parámetros**: Son variables que se definen en la declaración de una función y que reciben los valores (argumentos) que se pasan cuando la función es llamada. Permiten que la función trabaje con diferentes datos sin modificar su definición.Parametros
+
+```py
+def myFunction(parameterOne, parameterTwo):
+    print(f"{parameterOne} {parameterTwo}")
+```
