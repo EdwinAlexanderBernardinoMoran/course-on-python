@@ -157,3 +157,21 @@ mostrar_info(nombre="Ana", edad=30, ciudad="Lima")
 # ciudad: Lima
 ```
 
+#### Alcance de las Variables en Python
+
+El **alcance** (scope) de una variable en Python determina desde qué partes del código se puede acceder a esa variable. Los principales alcances son:
+
+- **Local**: La variable se define dentro de una función y solo es accesible dentro de esa función.
+- **Global**: La variable se define fuera de cualquier función y es accesible desde cualquier parte del archivo.
+- **No local**: Usado en funciones anidadas, permite acceder a variables de la función envolvente.
+
+#### ¿Por qué es mala práctica definir variables en el entorno global?
+
+Definir variables en el entorno global puede causar problemas como:
+
+- **Dificultad para depurar**: Las variables globales pueden ser modificadas desde cualquier parte del código, lo que dificulta rastrear errores.
+- **Colisiones de nombres**: Es fácil sobrescribir accidentalmente una variable global, causando comportamientos inesperados.
+- **Menor reutilización**: El uso de variables globales reduce la modularidad y reutilización del código.
+- **Dependencias ocultas**: Las funciones que dependen de variables globales no son independientes, lo que dificulta su comprensión y prueba.
+
+Por estas razones, se recomienda limitar el uso de variables globales y preferir variables locales dentro de funciones.
