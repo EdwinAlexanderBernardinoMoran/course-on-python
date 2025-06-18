@@ -120,7 +120,20 @@ def myFunction(parameterOne, parameterTwo):
     print(f"{parameterOne} {parameterTwo}")
 ```
 
-- Para pasar multiples argumentos a una funcion es necesario utilizar `xargs` o el signo * y el nombre del parametro.
+**`*args`**: Es una convención en Python que permite a una función recibir un número variable de argumentos posicionales. Dentro de la función, `args` es una tupla que contiene todos los valores pasados como argumentos adicionales. Se utiliza anteponiendo un asterisco (`*`) al nombre del parámetro en la definición de la función.
+
+```py
+def imprimir_argumentos(*args):
+    for arg in args:
+        print(arg)
+
+imprimir_argumentos(1, 2, 3, "hola")
+# Salida:
+# 1
+# 2
+# 3
+# hola
+```
 
 ```py
 def sum(*args):
@@ -129,3 +142,18 @@ def sum(*args):
         result += arg
     print(f"La suma de los argumentos es: {result}")
 ```
+
+**`kwargs`**: Es un mecanismo en Python que permite pasar un número variable de argumentos con nombre (clave-valor) a una función. Se define usando `**kwargs` en la declaración de la función. Dentro de la función, `kwargs` es un diccionario que contiene todos los argumentos nombrados que se pasaron.
+
+```py
+def mostrar_info(**kwargs):
+    for clave, valor in kwargs.items():
+        print(f"{clave}: {valor}")
+
+mostrar_info(nombre="Ana", edad=30, ciudad="Lima")
+# Salida:
+# nombre: Ana
+# edad: 30
+# ciudad: Lima
+```
+
