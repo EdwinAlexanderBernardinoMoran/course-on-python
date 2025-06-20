@@ -175,3 +175,8 @@ Definir variables en el entorno global puede causar problemas como:
 - **Dependencias ocultas**: Las funciones que dependen de variables globales no son independientes, lo que dificulta su comprensión y prueba.
 
 Por estas razones, se recomienda limitar el uso de variables globales y preferir variables locales dentro de funciones.
+
+## 5 - Tipos avanzados
+
+- Las listas en Python son estructuras de datos que permiten almacenar varios elementos en una sola variable. Son muy flexibles porque pueden contener cualquier tipo de dato (números, cadenas, otras listas, etc.) y su tamaño puede cambiar dinámicamente (puedes agregar o quitar elementos).
+
