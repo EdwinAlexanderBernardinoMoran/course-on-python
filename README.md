@@ -99,7 +99,7 @@ python3 manage.py createsuperuser
 
 - Operadores de comparacion
 
-```py
+```python
 # Forma normal
 if edad >= 15 and edad <= 65:
     print("Puedes entrar a la piscina")
@@ -113,16 +113,16 @@ if 15 <= edad <= 65:
 
 ## S4 - Funciones
 
-**Parámetros**: Son variables que se definen en la declaración de una función y que reciben los valores (argumentos) que se pasan cuando la función es llamada. Permiten que la función trabaje con diferentes datos sin modificar su definición.Parametros
+**Parámetros**: Son variables que se definen en la declaración de una función y que reciben los valores (argumentos) que se pasan cuando la función es llamada. Permiten que la función trabaje con diferentes datos sin modificar su definición.
 
-```py
+```python
 def myFunction(parameterOne, parameterTwo):
     print(f"{parameterOne} {parameterTwo}")
 ```
 
 **`*args`**: Es una convención en Python que permite a una función recibir un número variable de argumentos posicionales. Dentro de la función, `args` es una tupla que contiene todos los valores pasados como argumentos adicionales. Se utiliza anteponiendo un asterisco (`*`) al nombre del parámetro en la definición de la función.
 
-```py
+```python
 def imprimir_argumentos(*args):
     for arg in args:
         print(arg)
@@ -135,7 +135,7 @@ imprimir_argumentos(1, 2, 3, "hola")
 # hola
 ```
 
-```py
+```python
 def sum(*args):
     result = 0
     for arg in args:
@@ -145,7 +145,7 @@ def sum(*args):
 
 **`kwargs`**: Es un mecanismo en Python que permite pasar un número variable de argumentos con nombre (clave-valor) a una función. Se define usando `**kwargs` en la declaración de la función. Dentro de la función, `kwargs` es un diccionario que contiene todos los argumentos nombrados que se pasaron.
 
-```py
+```python
 def mostrar_info(**kwargs):
     for clave, valor in kwargs.items():
         print(f"{clave}: {valor}")
@@ -180,3 +180,13 @@ Por estas razones, se recomienda limitar el uso de variables globales y preferir
 
 - Las listas en Python son estructuras de datos que permiten almacenar varios elementos en una sola variable. Son muy flexibles porque pueden contener cualquier tipo de dato (números, cadenas, otras listas, etc.) y su tamaño puede cambiar dinámicamente (puedes agregar o quitar elementos).
 
+- La función `enumerate` en Python sirve para iterar sobre una colección (como una lista, tupla, etc.) y, al mismo tiempo, obtener el índice y el valor de cada elemento.
+
+En vez de solo obtener el valor, como en un ciclo for normal, `enumerate` te da una tupla con el índice (empezando por defecto en 0) y el elemento correspondiente.
+
+```py
+mascotas = ["Pelusa", "Pulga", "Felipe", "Chanchito Feliz"]
+
+for index, mascota in enumerate(mascotas):
+    print(index, mascota)
+```
