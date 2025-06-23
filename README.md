@@ -190,3 +190,33 @@ mascotas = ["Pelusa", "Pulga", "Felipe", "Chanchito Feliz"]
 for index, mascota in enumerate(mascotas):
     print(index, mascota)
 ```
+
+#### Manipulando listas
+
+- Buscando elementos
+
+```py
+mascotas = ["Pelusa", "Pulga", "Felipe", "Chanchito Feliz"]
+
+mascotas.index("Felipe")  # Devuelve el índice del primer elemento encontrado
+mascotas.count("Felipe")  # Devuelve el número de veces que aparece el elemento
+
+```
+
+---
+### Métodos para agregar elementos a la lista
+
+- **`insert(posición, elemento)`**: Inserta un elemento en una posición específica de la lista. Recibe dos argumentos: la posición donde se insertará el elemento y el valor del elemento a insertar.
+- **`append(elemento)`**: Agrega un elemento al final de la lista. Solo recibe el elemento a agregar como argumento.
+
+### Métodos para eliminar elementos de la lista
+
+- **`remove(elemento)`**: Elimina la primera aparición del elemento especificado en la lista. Si el elemento no existe, lanza una excepción.
+- **`pop([índice])`**: Elimina y retorna el último elemento de la lista. Si se proporciona un índice, elimina y retorna el elemento en esa posición.
+- **`del lista[índice]`**: Elimina el elemento en la posición especificada de la lista usando su índice.
+- **`clear()`**: Elimina todos los elementos de la lista, dejándola vacía.
+
+### Metodos para ordenar listas
+
+- **`sort()`**: Ordena los elementos de la lista en el lugar (modifica la lista original). Por defecto, ordena de menor a mayor, pero se puede personalizar usando los argumentos `key` y `reverse`.
+- **`sorted()`**: Devuelve una nueva lista ordenada a partir de cualquier iterable (lista, tupla, etc.) sin modificar el original. También acepta los argumentos `key` y `reverse`.
