@@ -19,6 +19,8 @@ namesTwo = [user[0] for user in users]
 print(namesTwo)
 
 
+# *******************************************************
+
 # FILTRADO DE LISTAS
 namesThree = [user for user in users if user[1] > 23]
 
