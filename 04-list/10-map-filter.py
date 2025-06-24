@@ -12,6 +12,7 @@ names = list(map(lambda user: user[0], users))  # Using map to extract names
 namesTwo = [user[0] for user in users]
 
 
+# *******************************************************
 
 
 # FILTRADO DE LISTAS
