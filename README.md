@@ -278,3 +278,34 @@ print(namesThree)
 # Ejemplo de como luce una tupla
 numbers = (1, 2, 3, 4, 5, 6)
 ```
+
+#### Sets
+
+- **Sets** en Python son colecciones no ordenadas de elementos únicos, es decir, no permiten elementos duplicados. Se definen usando llaves `{}` o la función `set()`. Los sets son útiles para operaciones de conjuntos como unión, intersección y diferencia.
+
+```python
+# Crear un set
+frutas = {"manzana", "banana", "naranja"}
+print(frutas)
+
+# Agregar un elemento
+frutas.add("pera")
+
+# Eliminar un elemento
+frutas.remove("banana")
+
+# Operaciones de conjuntos
+numbers = {1, 1, 2, 2, 3, 4}
+
+lists = [3, 4, 5]
+lists = set(lists)
+
+print( numbers | lists )  # Unión: {1, 2, 3, 4, 5}, Se encarga de hacer una unión entre dos sets y elimina los duplicados
+print( numbers & lists )  # Intersección: {3, 4}, Se encarga de encontrar los elementos que están en ambos sets
+print( numbers - lists )  # Diferencia: {1, 2}, Se encarga de encontrar los elementos que están en el primer set pero no en el segundo.
+print( numbers ^ lists )  # Diferencia simétrica: {1, 2, 5}, Se encarga de encontrar los elementos que están en uno de los sets pero no en ambos
+print( numbers == lists )  # Igualdad: False, Se encarga de comparar si los sets son iguales
+print( numbers != lists )  # Desigualdad: True, Se encarga de comparar si los sets son diferentes
+```
+
+- Los `Sets` no se encuentran ordenados y no podemos acceder a aun elemento de ellos.
