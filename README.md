@@ -404,7 +404,7 @@ Puntos importantes:
 
     - Se accede a ellas usando Clase.propiedad o instancia.propiedad.
     - Cambiar el valor en la clase afecta a todas las instancias que no hayan sobrescrito ese atributo.
-    - Son útiles para valores que deben ser iguales para todas las instancias (por ejemplo, número de patas en perro
+    - Son útiles para valores que deben ser iguales para todas las instancias (por ejemplo, número de patas en perro)
 
 
 
@@ -418,3 +418,29 @@ class Dog:
 ```
 
 - Cuando creamos propiedades de instancia utilizamos la palabra reservada de `self` seguido de un punto y el nombre de la propiedad. Las propieades de clase se crean despues de definir las clases y para todas las instancias creadas de la clase deben tener el mismo valor para todas.
+
+#### Métodos de clase
+
+En Python, los **métodos de clase** son funciones definidas dentro de una clase que reciben la propia clase como primer argumento, en lugar de una instancia. Se definen usando el decorador `@classmethod`.
+
+- El primer parámetro de un método de clase es convencionalmente llamado `cls`.
+- Se utilizan para operar sobre la clase en sí, no sobre instancias específicas.
+- Permiten modificar el estado de la clase o crear instancias de formas alternativas.
+
+```python
+class MiClase:
+    contador = 0
+
+    @classmethod
+    def incrementar_contador(cls):
+        cls.contador += 1
+
+MiClase.incrementar_contador()
+print(MiClase.contador)  # Imprime 1
+```
+
+- **Diferencia clave**:
+
+- Los métodos de instancia usan self y afectan a una instancia.
+- Los métodos de clase usan cls y afectan a la clase entera.
+
