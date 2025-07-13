@@ -7,11 +7,11 @@
 
 ## Implementaciones de Python
 
-- **CPython**: Implementado en C
-- **PyPy**: Implementado en Python
-- **Jython**: Implementado en Java
-- **IronPython**: Implementado en C#
-- **Brython**: Para navegadores web, traduce a JavaScript
+- **CPython**: Implementado en C.
+- **PyPy**: Implementado en Python.
+- **Jython**: Implementado en Java.
+- **IronPython**: Implementado en C#.
+- **Brython**: Para navegadores web, traduce a JavaScript.
 
 ## Proceso de Ejecución
 
@@ -94,10 +94,10 @@ python3 manage.py createsuperuser
 ## S3 - Control de Flujo
 
 - Los operadores lógicos se evalúan de izquierda a derecha.
-    - Con el operador `and` basta con que el valor izquiero sea `false` para ya no seguir evaluando lo demas
-    - Con el operador `or` basta con que el primero sea `true` para ya no seguir evaluando lo demas.
+    - Con el operador `and` basta con que el valor izquierdo sea `false` para ya no seguir evaluando lo demás.
+    - Con el operador `or` basta con que el primero sea `true` para ya no seguir evaluando lo demás.
 
-- Operadores de comparacion
+- Operadores de comparación:
 
 ```python
 # Forma normal
@@ -109,7 +109,7 @@ if 15 <= edad <= 65:
     print("Puedes entrar a la piscina")
 ```
 
-- Iterables son: Tuplas, Listas y Strings
+- Iterables son: Tuplas, Listas y Strings.
 
 ## S4 - Funciones
 
@@ -120,7 +120,7 @@ def myFunction(parameterOne, parameterTwo):
     print(f"{parameterOne} {parameterTwo}")
 ```
 
-**`*args`**: Es una convención en Python que permite a una función recibir un número variable de argumentos posicionales. Dentro de la función, `args` es una tupla que contiene todos los valores pasados como argumentos adicionales. Se utiliza anteponiendo un asterisco (`*`) al nombre del parámetro en la definición de la función.
+**`*args`**: Permite a una función recibir un número variable de argumentos posicionales. Dentro de la función, `args` es una tupla con todos los valores pasados como argumentos adicionales.
 
 ```python
 def imprimir_argumentos(*args):
@@ -143,7 +143,7 @@ def sum(*args):
     print(f"La suma de los argumentos es: {result}")
 ```
 
-**`kwargs`**: Es un mecanismo en Python que permite pasar un número variable de argumentos con nombre (clave-valor) a una función. Se define usando `**kwargs` en la declaración de la función. Dentro de la función, `kwargs` es un diccionario que contiene todos los argumentos nombrados que se pasaron.
+**`kwargs`**: Permite pasar un número variable de argumentos con nombre (clave-valor) a una función. Dentro de la función, `kwargs` es un diccionario con todos los argumentos nombrados.
 
 ```python
 def mostrar_info(**kwargs):
@@ -161,30 +161,26 @@ mostrar_info(nombre="Ana", edad=30, ciudad="Lima")
 
 El **alcance** (scope) de una variable en Python determina desde qué partes del código se puede acceder a esa variable. Los principales alcances son:
 
-- **Local**: La variable se define dentro de una función y solo es accesible dentro de esa función.
-- **Global**: La variable se define fuera de cualquier función y es accesible desde cualquier parte del archivo.
+- **Local**: Definida dentro de una función, accesible solo ahí.
+- **Global**: Definida fuera de cualquier función, accesible desde cualquier parte del archivo.
 - **No local**: Usado en funciones anidadas, permite acceder a variables de la función envolvente.
 
 #### ¿Por qué es mala práctica definir variables en el entorno global?
 
-Definir variables en el entorno global puede causar problemas como:
+- **Dificultad para depurar**: Las variables globales pueden ser modificadas desde cualquier parte del código, dificultando rastrear errores.
+- **Colisiones de nombres**: Es fácil sobrescribir accidentalmente una variable global.
+- **Menor reutilización**: Reduce la modularidad y reutilización del código.
+- **Dependencias ocultas**: Las funciones que dependen de variables globales no son independientes.
 
-- **Dificultad para depurar**: Las variables globales pueden ser modificadas desde cualquier parte del código, lo que dificulta rastrear errores.
-- **Colisiones de nombres**: Es fácil sobrescribir accidentalmente una variable global, causando comportamientos inesperados.
-- **Menor reutilización**: El uso de variables globales reduce la modularidad y reutilización del código.
-- **Dependencias ocultas**: Las funciones que dependen de variables globales no son independientes, lo que dificulta su comprensión y prueba.
-
-Por estas razones, se recomienda limitar el uso de variables globales y preferir variables locales dentro de funciones.
+Se recomienda limitar el uso de variables globales y preferir variables locales dentro de funciones.
 
 ## 5 - Tipos avanzados
 
-- Las listas en Python son estructuras de datos que permiten almacenar varios elementos en una sola variable. Son muy flexibles porque pueden contener cualquier tipo de dato (números, cadenas, otras listas, etc.) y su tamaño puede cambiar dinámicamente (puedes agregar o quitar elementos).
+- Las listas en Python son estructuras de datos que permiten almacenar varios elementos en una sola variable. Son flexibles y pueden contener cualquier tipo de dato. Su tamaño puede cambiar dinámicamente.
 
-- La función `enumerate` en Python sirve para iterar sobre una colección (como una lista, tupla, etc.) y, al mismo tiempo, obtener el índice y el valor de cada elemento.
+- La función `enumerate` sirve para iterar sobre una colección y obtener el índice y el valor de cada elemento.
 
-En vez de solo obtener el valor, como en un ciclo for normal, `enumerate` te da una tupla con el índice (empezando por defecto en 0) y el elemento correspondiente.
-
-```py
+```python
 mascotas = ["Pelusa", "Pulga", "Felipe", "Chanchito Feliz"]
 
 for index, mascota in enumerate(mascotas):
@@ -193,38 +189,37 @@ for index, mascota in enumerate(mascotas):
 
 #### Manipulando listas
 
-- Buscando elementos
+- Buscando elementos:
 
-```py
+```python
 mascotas = ["Pelusa", "Pulga", "Felipe", "Chanchito Feliz"]
 
 mascotas.index("Felipe")  # Devuelve el índice del primer elemento encontrado
 mascotas.count("Felipe")  # Devuelve el número de veces que aparece el elemento
-
 ```
 
 #### Métodos para agregar elementos a la lista
 
-- **`insert(posición, elemento)`**: Inserta un elemento en una posición específica de la lista. Recibe dos argumentos: la posición donde se insertará el elemento y el valor del elemento a insertar.
-- **`append(elemento)`**: Agrega un elemento al final de la lista. Solo recibe el elemento a agregar como argumento.
+- **`insert(posición, elemento)`**: Inserta un elemento en una posición específica.
+- **`append(elemento)`**: Agrega un elemento al final de la lista.
 
 #### Métodos para eliminar elementos de la lista
 
-- **`remove(elemento)`**: Elimina la primera aparición del elemento especificado en la lista. Si el elemento no existe, lanza una excepción.
-- **`pop([índice])`**: Elimina y retorna el último elemento de la lista. Si se proporciona un índice, elimina y retorna el elemento en esa posición.
-- **`del lista[índice]`**: Elimina el elemento en la posición especificada de la lista usando su índice.
-- **`clear()`**: Elimina todos los elementos de la lista, dejándola vacía.
+- **`remove(elemento)`**: Elimina la primera aparición del elemento.
+- **`pop([índice])`**: Elimina y retorna el último elemento o el de la posición dada.
+- **`del lista[índice]`**: Elimina el elemento en la posición especificada.
+- **`clear()`**: Elimina todos los elementos de la lista.
 
-#### Metodos para ordenar listas
+#### Métodos para ordenar listas
 
-- **`sort()`**: Ordena los elementos de la lista en el lugar (modifica la lista original). Por defecto, ordena de menor a mayor, pero se puede personalizar usando los argumentos `key` y `reverse`.
-- **`sorted()`**: Devuelve una nueva lista ordenada a partir de cualquier iterable (lista, tupla, etc.) sin modificar el original. También acepta los argumentos `key` y `reverse`.
+- **`sort()`**: Ordena la lista en el lugar.
+- **`sorted()`**: Devuelve una nueva lista ordenada a partir de cualquier iterable.
 
-#### Expresion lambda
+#### Expresión lambda
 
-- Es una forma concisa de crear funciones anónimas (sin nombre) en una sola línea. Se usa principalmente para funciones simples y de corta duración.
+- Forma concisa de crear funciones anónimas en una sola línea.
 
-```py
+```python
 users = [
     ["John", 30],
     ["Jane", 25],
@@ -232,20 +227,20 @@ users = [
     ["Bob", 22]
 ]
 
-users.sort(key=lambda parameter:returnValue)  # Ordena por edad en orden descendente
+users.sort(key=lambda user: user[1], reverse=True)  # Ordena por edad en orden descendente
 print(users)
 ```
 
-#### Listas de comprension
+#### Listas de comprensión
 
-- Las listas de comprensión en Python son una forma concisa y eficiente de crear listas a partir de secuencias existentes (como listas, rangos o cualquier iterable), aplicando una expresión y, opcionalmente, una condición.
+- Forma concisa y eficiente de crear listas a partir de secuencias existentes.
 
-```py
+```python
 [expresión for elemento in iterable if condición]
 ```
 
-```py
-# Este ejemplo se le conoce como transformacion (map)
+```python
+# Transformación (map)
 users = [
     ["John", 30],
     ["Jane", 25],
@@ -257,8 +252,8 @@ namesTwo = [user[0] for user in users]
 print(namesTwo)
 ```
 
-```py
-# Este ejemplo se le conoce como filtrado (filter)
+```python
+# Filtrado (filter)
 users = [
     ["John", 30],
     ["Jane", 25],
@@ -272,16 +267,15 @@ print(namesThree)
 
 #### Tuplas
 
-- Las tuplas en Python son estructuras de datos inmutables que permiten almacenar una colección ordenada de elementos. A diferencia de las listas, las tuplas no pueden ser modificadas después de su creación, lo que significa que no se pueden agregar, eliminar ni cambiar sus elementos. Se definen utilizando paréntesis () y pueden contener elementos de diferentes tipos de datos. Las tuplas son útiles para representar datos que no deben cambiar a lo largo del tiempo y pueden ser utilizadas como claves en diccionarios debido a su inmutabilidad.
+- Estructuras de datos inmutables que almacenan una colección ordenada de elementos. Se definen con paréntesis `()`.
 
-```py
-# Ejemplo de como luce una tupla
+```python
 numbers = (1, 2, 3, 4, 5, 6)
 ```
 
 #### Sets
 
-- **Sets** en Python son colecciones no ordenadas de elementos únicos, es decir, no permiten elementos duplicados. Se definen usando llaves `{}` o la función `set()`. Los sets son útiles para operaciones de conjuntos como unión, intersección y diferencia.
+- Colecciones no ordenadas de elementos únicos. Se definen con llaves `{}` o la función `set()`.
 
 ```python
 # Crear un set
@@ -300,12 +294,71 @@ numbers = {1, 1, 2, 2, 3, 4}
 lists = [3, 4, 5]
 lists = set(lists)
 
-print( numbers | lists )  # Unión: {1, 2, 3, 4, 5}, Se encarga de hacer una unión entre dos sets y elimina los duplicados
-print( numbers & lists )  # Intersección: {3, 4}, Se encarga de encontrar los elementos que están en ambos sets
-print( numbers - lists )  # Diferencia: {1, 2}, Se encarga de encontrar los elementos que están en el primer set pero no en el segundo.
-print( numbers ^ lists )  # Diferencia simétrica: {1, 2, 5}, Se encarga de encontrar los elementos que están en uno de los sets pero no en ambos
-print( numbers == lists )  # Igualdad: False, Se encarga de comparar si los sets son iguales
-print( numbers != lists )  # Desigualdad: True, Se encarga de comparar si los sets son diferentes
+print(numbers | lists)  # Unión: {1, 2, 3, 4, 5}
+print(numbers & lists)  # Intersección: {3, 4}
+print(numbers - lists)  # Diferencia: {1, 2}
+print(numbers ^ lists)  # Diferencia simétrica: {1, 2, 5}
+print(numbers == lists)  # Igualdad: False
+print(numbers != lists)  # Desigualdad: True
 ```
 
-- Los `Sets` no se encuentran ordenados y no podemos acceder a aun elemento de ellos.
+- Los sets no están ordenados y no se puede acceder a un elemento por índice.
+
+#### Diccionarios
+
+Los diccionarios en Python almacenan pares clave-valor. Son mutables, ordenados (desde Python 3.7+) y no permiten claves duplicadas.
+
+- **Características principales**:
+    - Mutables: Puedes agregar, modificar y eliminar elementos.
+    - Ordenados: Mantienen el orden de inserción.
+    - Claves únicas: No pueden existir claves duplicadas.
+    - Acceso rápido: Búsqueda de elementos por clave en tiempo O(1) promedio.
+    - Flexibles: Las claves deben ser inmutables (strings, números, tuplas), los valores pueden ser de cualquier tipo.
+
+```python
+# Crear un diccionario vacío
+diccionario = {}
+diccionario = dict()
+
+# Crear un diccionario con datos
+persona = {
+    "nombre": "Juan",
+    "edad": 30,
+    "ciudad": "Madrid",
+    "activo": True
+}
+```
+
+- **Métodos útiles**:
+    - keys(): Devuelve las claves
+    - values(): Devuelve los valores
+    - items(): Devuelve pares clave-valor
+    - get(clave, default): Obtiene valor con valor por defecto si no existe
+    - update(): Actualiza con otro diccionario
+
+#### Operadores de desempaquetamiento
+
+Los operadores de desempaquetamiento en Python son * y **.
+
+Permiten "desempaquetar" (expandir) colecciones como listas, tuplas o diccionarios en argumentos individuales al llamar funciones.
+
+- desempaqueta secuencias (listas, tuplas) en argumentos posicionales.
+- desempaqueta diccionarios en argumentos nombrados (keyword arguments).
+
+
+```python
+# Desempaquetar una lista en argumentos de función
+def suma(a, b, c):
+    return a + b + c
+
+numeros = [1, 2, 3]
+resultado = suma(*numeros)  # Equivale a suma(1, 2, 3)
+
+# Desempaquetar un diccionario en argumentos nombrados
+def saluda(nombre, saludo):
+    print(f"{saludo}, {nombre}!")
+
+datos = {'nombre': 'Ana', 'saludo': 'Hola'}
+saluda(**datos)  # Equivale a saluda(nombre='Ana', saludo='Hola')
+```
+
