@@ -391,4 +391,5 @@ Puntos importantes:
 
 - __init__ es el método constructor, se llama al crear un objeto.
 - self se refiere a la instancia actual de la clase.
+- a self se le puede asignar una propiedad ( viene siendo una variable que se encuentra asociada a una instancia de una clase )
 
