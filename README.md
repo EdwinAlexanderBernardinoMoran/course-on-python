@@ -393,3 +393,28 @@ Puntos importantes:
 - self se refiere a la instancia actual de la clase.
 - a self se le puede asignar una propiedad ( viene siendo una variable que se encuentra asociada a una instancia de una clase )
 
+
+#### Propiedades de clase
+
+- Propiedad = Atributo
+
+- Las propiedades de clase en Python son atributos que se definen directamente dentro de la clase, pero fuera de cualquier método. Estas propiedades son compartidas por todas las instancias de la clase, es decir, todas las instancias ven el mismo valor a menos que se sobrescriba en una instancia específica.
+
+- **Puntos clave**:
+
+    - Se accede a ellas usando Clase.propiedad o instancia.propiedad.
+    - Cambiar el valor en la clase afecta a todas las instancias que no hayan sobrescrito ese atributo.
+    - Son útiles para valores que deben ser iguales para todas las instancias (por ejemplo, número de patas en perro
+
+
+
+```python
+class Dog:
+    paws = 4  # Class property (attribute)
+
+    def __init__(self, name, age = 0):
+        self.name = name # Property instance
+        self.age = age # Property instance
+```
+
+- Cuando creamos propiedades de instancia utilizamos la palabra reservada de `self` seguido de un punto y el nombre de la propiedad. Las propieades de clase se crean despues de definir las clases y para todas las instancias creadas de la clase deben tener el mismo valor para todas.
