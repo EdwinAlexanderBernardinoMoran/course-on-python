@@ -362,3 +362,33 @@ datos = {'nombre': 'Ana', 'saludo': 'Hola'}
 saluda(**datos)  # Equivale a saluda(nombre='Ana', saludo='Hola')
 ```
 
+
+## 6 - Clases
+
+Las clases en Python son plantillas o moldes que permiten crear objetos. Definen atributos (datos) y métodos (funciones) que describen el comportamiento y las características de esos objetos.
+
+- **Conceptos clave**:
+
+- Una clase es como un plano; un objeto es una instancia concreta de ese plano.
+- Se definen usando la palabra clave class.
+- Permiten organizar y reutilizar código.
+
+```python
+class Persona:
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+
+    def saludar(self):
+        print(f"Hola, mi nombre es {self.nombre} y tengo {self.edad} años.")
+
+persona1 = Persona("Ana", 30)
+persona1.saludar()  # Salida: Hola, mi nombre es Ana y tengo 30 años.
+
+```
+
+Puntos importantes:
+
+- __init__ es el método constructor, se llama al crear un objeto.
+- self se refiere a la instancia actual de la clase.
+
