@@ -49,6 +49,7 @@ source nombre_entorno/bin/activate
 
 ```bash
 pip install django
+pip freeze > requirements.txt # 
 django-admin startproject mysite .  # Crea el proyecto en el directorio actual
 python3 manage.py startapp nombre_app
 python3 manage.py runserver puerto  # Levanta el servidor
@@ -90,6 +91,12 @@ python3 manage.py createsuperuser
     - `ViewSet` controla el acceso a los serializadores.
 
 ---
+
+Existen tipos de variables:
+    - Normal
+    - Privada
+    - Constantes
+
 
 ## S3 - Control de Flujo
 
