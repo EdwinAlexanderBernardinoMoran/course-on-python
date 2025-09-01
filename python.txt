@@ -66,7 +66,62 @@ Django: Es un framework que esta encima de Python
     - crear un archivo serializer.py estos permiten llamar un modulo especial de rest framework.
     - el viewSet nos dice quien puede consultar el serializer
 
+- URL y View:
+    - Para acceder a una view es necesario mandarla a llamar por medio de una url, en este caso crear una nueva apps, y crear un archivo llamado (urls.py) y creas las rutas ahi, ejemplo.
+
+```
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('quotes/', views.index, name='index')
+]
+
+```
+
+- Luego incluyes este archivo en la app principal de la siguiente manera.
+
+```
+    path('', include('quotes.urls')),
+```
 
 S3 - Control de Flujo
 
 - Los operadores logicos siempre se evaluan de izquiera a derecha.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FLUJO DE EXODUS Y INTEGRACION DE REMESAS.
+
+- Un solo registro el cual servira para comprar BTC
+- Tambien para las aplicaciones para las remesas.
+
+
+
+
+- Cajero dentro de EXODUS
+- Exodus hablara con el backend para remesas
+
+1 - ATM llega donde quiere enviar dinero
+2 - Selecciona la opcion de pago
+3 - Una wallet, cash picco y transferencia bancaria
+
+Transnetwork y DTOBANS tienen sus propios limites de transaccion.
+
+Usuarios con capacidades para hacer remesas y compra de BTC
+Usuarios atado a transacciones con BTC o remesas.
