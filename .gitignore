@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+07-modules/modules/__pycache__/
+07-modules/modules/users/__pycache__/
+
 # Distribution / packaging
 .Python
 build/
