@@ -451,3 +451,44 @@ print(MiClase.contador)  # Imprime 1
 - Los métodos de instancia usan self y afectan a una instancia.
 - Los métodos de clase usan cls y afectan a la clase entera.
 
+
+## 8 - Modulos
+
+Los módulos en Python son archivos que contienen código Python (funciones, clases, variables) que puedes reutilizar en otros programas. Permiten organizar el código en partes más pequeñas y manejables.
+
+**Conceptos clave:**
+
+- Un módulo es simplemente un archivo `.py`.
+- Puedes importar módulos usando la palabra clave `import`.
+- Python tiene módulos estándar (como `math`, `os`) y puedes crear los tuyos propios.
+- Los módulos ayudan a mantener el código organizado y reutilizable.
+
+#### Modulos compilados
+
+Cuando nosotros importamos un modulo python compila este modulo a bitecode
+
+- Mejora el rendimiento de carga de modulos( El codigo nose vuelve efeciente, unicamente python ya no compila cuando se carga el modulo por segunda vez)
+- El nombre de estos archivos se conforman por lo siguiente, la implementacion que utilizamos de python, la version de python y la extencion (.pyc, python y cache)
+- Esto ahorra tiempo de carga, pero no hace que el programa corra más rápido en ejecución, porque la máquina virtual igual interpreta el bytecode.
+
+#### Paquetes
+
+- **Modulo**: Apunta a archivos
+- **Paquetes**: Apuntan a Carpetas
+
+Formas de importar modulos dentro de paquetes:
+
+```py
+from users.actions import save, payTaxes
+import users.actions # Referenciaremos a todas la funciones que queramos acceder dentro de acciones de la siguiente manera
+
+users.actions.save()
+users.actions.payTaxes()
+
+from users import actions
+
+actions.save()
+actions.payTaxes()
+```
+
+#### SubPaquetes
