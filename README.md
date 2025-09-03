@@ -492,3 +492,64 @@ actions.payTaxes()
 ```
 
 #### SubPaquetes
+
+Los **subpaquetes** en Python son paquetes que están contenidos dentro de otros paquetes. Permiten organizar el código en una jerarquía de carpetas más profunda y estructurada. Un subpaquete es simplemente una carpeta dentro de un paquete principal que también contiene un archivo `__init__.py` (puede estar vacío).
+
+Por ejemplo, si tienes la siguiente estructura de directorios:
+
+```
+mi_paquete/
+    __init__.py
+    modulo1.py
+    subpaquete/
+        __init__.py
+        modulo2.py
+```
+
+- `mi_paquete` es un paquete.
+- `subpaquete` es un subpaquete dentro de `mi_paquete`.
+
+
+#### Referenciando paquetes
+
+Puedes importar módulos de subpaquetes así:
+
+```python
+from mi_paquete.subpaquete import modulo2
+```
+
+Esto ayuda a mantener proyectos grandes organizados y facilita la reutilización de código.
+
+
+#### dir
+
+La función dir() en Python se utiliza para listar los nombres de los atributos y métodos de un objeto, módulo o del entorno actual si no se le pasa ningún argumento. Es útil para explorar qué propiedades y funciones están disponibles para un objeto.
+
+Ejemplo:
+
+# Sin argumentos, muestra los nombres definidos en el entorno actual
+print(dir())
+
+# Con un objeto, muestra sus atributos y métodos
+x = [1, 2, 3]
+print(dir(x))
+
+Esto ayuda a descubrir funcionalidades y depurar código.
+
+#### Import condicionados
+
+Esto funciona en caso queramos imprimir o utilizar directamente el archivo desde el nombre en caso sea asi se utiliza lo siguiente.
+
+```python
+if __name__ != "__main__":
+    from ..management.management import save
+
+    print(__name__)
+
+    def payTaxes():
+        print("User taxes paid")
+        save()
+
+if __name__ == "__main__":
+    print("Task executed")
+```

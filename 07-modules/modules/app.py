@@ -3,11 +3,11 @@
 from users.taxes.utilities import payTaxes
 import users
 
-print(dir(users))
-print(users.__name__)
-print(users.__package__)
-print(users.__path__)
-print(users.__file__)
+# print(dir(users))
+# print(users.__name__)
+# print(users.__package__)
+# print(users.__path__)
+# print(users.__file__)
 
 # save()
 payTaxes()
