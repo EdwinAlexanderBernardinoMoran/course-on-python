@@ -525,16 +525,9 @@ Esto ayuda a mantener proyectos grandes organizados y facilita la reutilización
 
 La función dir() en Python se utiliza para listar los nombres de los atributos y métodos de un objeto, módulo o del entorno actual si no se le pasa ningún argumento. Es útil para explorar qué propiedades y funciones están disponibles para un objeto.
 
-Ejemplo:
+#### Paquetes con nombres dinamicos
 
-# Sin argumentos, muestra los nombres definidos en el entorno actual
-print(dir())
-
-# Con un objeto, muestra sus atributos y métodos
-x = [1, 2, 3]
-print(dir(x))
-
-Esto ayuda a descubrir funcionalidades y depurar código.
+Dependiendo de donde se esten ejecutando es el nombre que van a tener, si lo ejecutamos de manera directa se muestra algo como (__main__), en caso lo ejecutemos desde otro archivo lo que muestra es la ruta de donde se encuentra (users.taxes.utilities)
 
 #### Import condicionados
 
@@ -553,3 +546,48 @@ if __name__ != "__main__":
 if __name__ == "__main__":
     print("Task executed")
 ```
+
+## 9 - Rutas y Directorios
+
+#### Rutas
+
+La función Path() en Python pertenece al módulo pathlib. Sirve para trabajar con rutas de archivos y directorios de forma orientada a objetos, facilitando la manipulación, comprobación y construcción de rutas de manera más intuitiva que usando cadenas de texto.
+
+Ejemplo básico:
+
+```python
+from pathlib import Path
+
+# Crear una ruta
+ruta = Path('mi_carpeta/archivo.txt')
+
+ruta.exists() # Comprobar si existe
+ruta.is_file() # Si es un archivo
+ruta.is_dir() # Si es un directorio
+
+ruta.name, # Devuelve el nombre del archivo con su extencion.
+ruta.stem, # Devuelve el nombre del archivo sin su extencion.
+ruta.suffix, # Devuelve la extencion del archivo.
+ruta.parent, # Directorio padre
+ruta.absolute() # Devuelve la ruta completa de donde se encuentran.
+
+ruta.with_name("file.txt"), # Cambia el nombre del archivo incluyendo su extencion.
+ruta.with_suffix(".py"), # Cambia la extencion del archivo
+ruta.with_stem("fileTwo"), # Cambia el nombre del archivo sin su extencion
+
+
+# Obtener el directorio padre
+padre = ruta.parent
+
+# Unir rutas fácilmente
+nueva_ruta = padre / 'otro_archivo.txt'
+
+```
+
+**Ventajas**:
+
+- Más legible y seguro que manipular rutas como strings.
+- Funciona en Windows, Linux y macOS sin preocuparse por los separadores de ruta.
+- Permite operaciones como crear, borrar, listar archivos y carpetas.
+
+#### Directorios
