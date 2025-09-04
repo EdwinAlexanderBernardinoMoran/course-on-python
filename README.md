@@ -591,3 +591,15 @@ nueva_ruta = padre / 'otro_archivo.txt'
 - Permite operaciones como crear, borrar, listar archivos y carpetas.
 
 #### Directorios
+
+```py
+# Metodos para directorios
+
+path.mkdir()
+path.rmdir()
+path.rename("new_directory")
+path.exists()
+path.mkdir()
+path.rmdir()
+path.rename("new_directory")
+```
