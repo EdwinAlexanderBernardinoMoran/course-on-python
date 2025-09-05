@@ -11,6 +11,8 @@ __pycache__/
 07-modules/modules/users/actions/__pycache__/
 07-modules/modules/users/management/__pycache__/
 07-modules/modules/users/taxes/__pycache__/
+08-paths-and-directories/one/__pycache__/
+08-paths-and-directories/two/__pycache__/
 
 # Distribution / packaging
 .Python
