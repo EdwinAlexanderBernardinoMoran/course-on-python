@@ -599,7 +599,51 @@ path.mkdir()
 path.rmdir()
 path.rename("new_directory")
 path.exists()
-path.mkdir()
-path.rmdir()
-path.rename("new_directory")
+```
+
+## - 10 Gestino de Archivos
+
+#### Archivos
+
+Un archivo es un recurso de almacenamiento en tu sistema operativo donde puedes guardar datos, como texto, imágenes, código, etc. Los archivos permiten guardar información de manera persistente, es decir, que no se pierde cuando cierras el programa.
+
+```py
+from pathlib import Path
+
+file = Path("09-files/test-file.txt")
+# file.exists()
+# file.rename()
+# file.unlink()
+
+print(file.stat())
+
+```
+
+- **`file.exists()`**  
+  Verifica si el archivo realmente existe en esa ruta.  
+  Devuelve `True` o `False`.
+
+- **`file.rename()`**  
+  Cambia el nombre o mueve el archivo a otra ubicación.
+
+- **`file.unlink()`**  
+  Elimina (borra) el archivo.
+
+- **`file.stat()`**  
+  Devuelve información detallada sobre el archivo, como tamaño, fecha de creación, permisos, etc.
+
+#### Lectura y Escritura
+
+```py
+from pathlib import Path
+
+file = Path("09-files/test-file.txt")
+
+text = file.read_text() # Lectura del contenido como texto
+textTwo = file.read_text("utf-8").split("\n") # Lectura con codificación y separación por líneas
+
+# Podemos modificar y trabajar con el listado que ya tenemos.
+textTwo.insert(0, "New line added") # Modificar la lista de líneas
+
+file.write_text("\n".join(textTwo), "utf-8") # Sobrescribir el archivo
 ```
